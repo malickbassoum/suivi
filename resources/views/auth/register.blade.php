@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ config('app.name') }} | Registration Page</title>
+    <title>SSM | Page d'enregistrement</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -18,12 +18,12 @@
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
+        <a href="{{ url('/home') }}"><b>Systéme de Suivi des Matériels</b></a>
     </div>
 
     <div class="card">
         <div class="card-body register-card-body">
-            <p class="login-box-msg">Register a new membership</p>
+            <p class="login-box-msg">Enregistrer une nouvelle adhésion</p>
 
             <form method="post" action="{{ route('register') }}">
                 @csrf
@@ -33,7 +33,7 @@
                            name="name"
                            class="form-control @error('name') is-invalid @enderror"
                            value="{{ old('name') }}"
-                           placeholder="Full name">
+                           placeholder="Nom Complet">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-user"></span></div>
                     </div>
@@ -64,7 +64,7 @@
                     <input type="password"
                            name="password"
                            class="form-control @error('password') is-invalid @enderror"
-                           placeholder="Password">
+                           placeholder="Mot de passe">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-lock"></span></div>
                     </div>
@@ -79,7 +79,7 @@
                     <input type="password"
                            name="password_confirmation"
                            class="form-control"
-                           placeholder="Retype password">
+                           placeholder="Repeter mot de passe">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-lock"></span></div>
                     </div>
@@ -96,13 +96,13 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                        <button type="submit" class="btn btn-primary btn-block">S'Enregistrer</button>
                     </div>
                     <!-- /.col -->
                 </div>
             </form>
 
-            <a href="{{ route('login') }}" class="text-center">I already have a membership</a>
+            <a href="{{ route('login') }}" class="text-center">j'ai déja un compte</a>
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->
